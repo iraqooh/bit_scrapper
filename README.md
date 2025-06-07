@@ -1,5 +1,5 @@
-# BitSkrapper 🕷️
-**BitSkrapper** is a robust, modular, and highly customizable web scraping framework built using pure Python. Designed for developers and researchers who need powerful, script-based control over data extraction without relying on GUI-based tools or heavyweight frameworks.
+# BitScrapper 🕷️
+**BitScrapper** is a robust, modular, and highly customizable web scraping framework built using pure Python. Designed for developers and researchers who need powerful, script-based control over data extraction without relying on GUI-based tools or heavyweight frameworks.
 
 ---
 
@@ -24,7 +24,7 @@
 ---
 
 ## 🏗️ Project Structure
-
+```bash
 BitSkrapper/
 ├── bitskrapper/
 │ ├── init.py
@@ -40,6 +40,7 @@ BitSkrapper/
 ├── README.md
 ├── requirements.txt
 └── setup.py
+```
 
 ## 🚀 Getting Started
 
@@ -60,6 +61,7 @@ playwright install
 ```
 
 🕹️ Usage
+
 ⚙️ Basic Scrape Example
 
 ```bash
@@ -67,19 +69,22 @@ python scripts/scrape.py --url "https://example.com/products" --config "examples
 ```
 
 📁 Batch Mode with CSV Input
+
 ```bash
 python scripts/scrape.py --input-file "input/urls.csv" --config "examples/article_config.json"
 ```
 
 🗃️ Output Options
+
 ```bash
 # Save to CSV
 --output-format csv --output-path "output/results.csv"
-```
-
 # Save to MongoDB
 --output-format mongo --mongo-uri "mongodb://localhost:27017" --db "scrapes" --collection "products"
+```
+
 🛡️ Auth & Headers
+
 ```bash
 --headers '{"Authorization": "Bearer <TOKEN>", "User-Agent": "BitSkrapper/1.0"}'
 --cookies "sessionid=abcd1234"
@@ -101,9 +106,10 @@ Or add to crontab:
 
 🔧 Configuration
 
-BitSkrapper uses JSON/YAML config files to define scraping behavior.
+BitScrapper uses JSON/YAML config files to define scraping behavior.
 
 Sample Config (products.json)
+
 ```json
 {
   "selectors": {
@@ -128,6 +134,7 @@ Sample Config (products.json)
 
 
 🧪 Testing & Validation
+
 ```bash
 pytest tests/
 ```
