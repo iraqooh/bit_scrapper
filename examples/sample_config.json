@@ -1,0 +1,22 @@
+{
+    "selectors": {
+        "title": {
+            "type": "css",
+            "value": "BitScrapper by Iraku Harry"
+        },
+        "header": {
+            "type": "css",
+            "value": "h1"
+        }
+    },
+    "pagination": {
+        "enabled": true,
+        "strategy": "link",
+        "next_selector": "a.next",
+        "max_pages": 3
+    },
+    "headers": {
+        "User-Agent": "BitScrapperBot/1.0 (+https://github.com/iraqooh/bit_scrapper)"
+    },
+    "respect_robots": true
+}

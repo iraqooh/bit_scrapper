@@ -5,20 +5,14 @@
 
 ## 📦 Features
 
-- 🔗 Accepts single or multiple URLs via CLI or file input
 - 🔍 Customizable selectors using **CSS**, **XPath**, or **Regex**
-- ⚙️ Supports scraping of static and JavaScript-rendered content (via Playwright or Selenium)
+- ⚙️ Supports scraping of static content
 - 🔄 Automatic pagination handling
-- 🔐 Authentication (Basic Auth, Bearer Tokens, Cookies)
-- 🧠 Headless form interactions (login, search, etc.)
 - 🕰️ Request throttling and random delay configuration
-- 🌐 Proxy and user-agent rotation
-- ♻️ Duplicate filtering and incremental scraping
-- 🗃️ Exports data to **CSV**, **JSON**, or directly to **MongoDB**, **SQLite**, or **PostgreSQL**
+- 🌐 User-agent rotation
+- 🗃️ Exports data to **CSV** or **JSON**.
 - 🛠️ Configurable retry logic and error logging
-- 🧪 Built-in CLI testing mode to preview selectors and validate configurations
-- 🗓️ Cron-compatible job scheduling via CLI or Python script
-- 🔔 Optional alert hooks via email or webhook
+- 🗓️ Scheduling via CLI or Python script
 - 🧩 Easily extensible for site-specific parsers or output formats
 
 ---
@@ -53,7 +47,7 @@ BitSkrapper/
 ### 📥 Installation
 
 ```bash
-git clone https://github.com/yourusername/BitSkrapper.git
+git clone https://github.com/iraqooh/bit_scrapper.git
 cd BitSkrapper
 pip install -r requirements.txt
 # For dynamic scraping (optional)
@@ -65,7 +59,7 @@ playwright install
 ⚙️ Basic Scrape Example
 
 ```bash
-python scripts/scrape.py --url "https://example.com/products" --config "examples/products.json"
+python scripts/scrape.py --url "https://target_domain.com" --config "examples/products.json"
 ```
 
 📁 Batch Mode with CSV Input
@@ -78,9 +72,9 @@ python scripts/scrape.py --input-file "input/urls.csv" --config "examples/articl
 
 ```bash
 # Save to CSV
---output-format csv --output-path "output/results.csv"
+--format csv --output "output/results.csv"
 # Save to MongoDB
---output-format mongo --mongo-uri "mongodb://localhost:27017" --db "scrapes" --collection "products"
+--format mongo --mongo-uri "mongodb://localhost:27017" --db "scrapes" --collection "products"
 ```
 
 🛡️ Auth & Headers
@@ -96,12 +90,6 @@ Use the CLI-based scheduler:
 
 ```bash
 python scripts/schedule.py --task "examples/daily_scrape.json"
-```
-
-Or add to crontab:
-
-```cron
-0 * * * * /usr/bin/python3 /path/to/BitSkrapper/scripts/scrape.py --config /path/to/job.json
 ```
 
 🔧 Configuration
@@ -146,18 +134,23 @@ python scripts/test_selector.py --url "https://example.com" --selector ".item-ti
 ```
 
 📚 Documentation
-Comprehensive docs and usage examples are available in the /docs directory and will be published soon on ReadTheDocs.
+
+Comprehensive docs and usage examples are available in the /docs directory.
 
 🤝 Contributing
+
 Contributions are welcome! Please fork the repo and submit a pull request. Open an issue for bugs or feature requests.
 
 🛡️ License
-GNU Public License
+
+GNU General Public License v3
 
 🧠 Credits
+
 Created with passion by Mr. Iraku. Inspired by Scrapy, Playwright, and other great scraping tools, but keeping it Pythonic and minimal.
 
 🔗 Related Tools
+
 requests
 
 BeautifulSoup
